@@ -1,0 +1,46 @@
+[
+  {
+    "id": "S01",
+    "text": "Behind every software failure, there can be a real person. A delayed purchase. Money temporarily unavailable. A retry that behaves differently than expected."
+  },
+  {
+    "id": "S02",
+    "text": "In November 2025, an Indonesian customer publicly described a QRIS-funded app purchase. Their mobile banking balance had decreased, but the purchase never appeared, and Google Play marked it cancelled. The report describes the experience - not a verified technical root cause."
+  },
+  {
+    "id": "S03",
+    "text": "In April 2026, an Uber Eats customer reported extra funds they could not use. Commenters pointed to a pending authorization hold, rather than a proven second settled charge. The impact of uncertainty was still real."
+  },
+  {
+    "id": "S04",
+    "text": "Developers face a related engineering challenge. A September 2026 Medusa issue described a refund retry that could generate a different idempotency key after a provider error. If the first refund succeeded but its response was lost, another refund could become possible."
+  },
+  {
+    "id": "S05",
+    "text": "That is why payment systems need explicit invariants. Stripe's documentation explains idempotent requests: retries should not silently duplicate an operation. The question is not only whether code runs - but whether the business rule still holds."
+  },
+  {
+    "id": "S06",
+    "text": "Meet FlowGuard AI. Built to help developers reason about behavioral risk, turn a business requirement into testable expectations, and distinguish suspected bugs from observed proof."
+  },
+  {
+    "id": "S07",
+    "text": "Start with a code snippet or a public GitHub pull request, then describe the rule that matters. FlowGuard's Requirement Analyst extracts invariants. Its Risk Hunter flags possible failure paths. Its Verification Planner proposes assertions to investigate. Findings from external code remain labelled POTENTIAL. Reading a pull request is not the same as executing it."
+  },
+  {
+    "id": "S08",
+    "text": "Now watch our controlled Verification Lab. With two concurrent refund attempts and the same logical key, the intentionally vulnerable synthetic fixture commits two side effects. The invariant allows only one, so the observed result is VERIFIED FAIL. Switch to the corrected fixture under the same controlled rule: just one side effect. VERIFIED PASS. These are reproducible first-party simulations - not claims about a real bank or an external repository."
+  },
+  {
+    "id": "S09",
+    "text": "The engineering workflow was tested too. TestSprite automatically ran on our GitHub pull request. Earlier blocked checks prompted real improvements and repeat verification. On the final PR head, the official TestSprite V3 suite passed all ninety-seven tests, with zero failures and zero blocked cases, before merge."
+  },
+  {
+    "id": "S10",
+    "text": "After merge, our independent CI also passed one hundred eighteen unit tests and seventy Chromium browser tests. Each result links back to a verifiable run."
+  },
+  {
+    "id": "S11",
+    "text": "FlowGuard AI. Evidence before verdicts. Don't just review code. Prove the behavior."
+  }
+]
